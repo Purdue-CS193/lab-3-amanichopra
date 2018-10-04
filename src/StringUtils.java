@@ -17,6 +17,10 @@ public class StringUtils {
             Ex: res = "SFlannery"
                     --> res = "SFlanner"
          */
+        if (lastName.length() <= 7) {
+            res = res.toLowerCase();
+            return res;
+        }
         res = res.substring(0, 8);
         /* Convert the name to lower-case
             Ex: res = "SFlanner"
@@ -36,6 +40,6 @@ public class StringUtils {
      */
     public static String replaceStudentUsername(String text, String username) {
         /* Replace every instance of the username with proper message */
-        return text.replaceAll(username, "[DATA EXPUNDGED]");
+        return text.replaceAll(username, "[DATA EXPUNGED]");
     }
 }
